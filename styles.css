@@ -55,19 +55,23 @@ main {
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 10px; /* Mengurangi gap antar gambar */
 }
 
 .game-item {
-    border-radius: 20px;
+    border-radius: 10px; /* Mengurangi radius untuk kesan lebih kecil */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Mengurangi shadow agar tidak terlalu besar */
     transition: transform 0.3s ease;
+    width: 80px; /* Lebar dan tinggi dikurangi untuk mengecilkan gambar */
+    height: 80px;
+    margin: 0 auto; /* Agar item tetap berada di tengah */
 }
 
 .game-item img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover; /* Menyesuaikan gambar dengan ukuran container */
 }
 
 .game-item:hover {
@@ -85,7 +89,7 @@ footer {
 @media (max-width: 768px) {
     .games-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 8px; /* Mengurangi jarak antar gambar di layar lebih kecil */
     }
 }
 
@@ -107,8 +111,13 @@ footer {
 
     .games-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 8px;
         max-width: 100%;
+    }
+
+    .game-item {
+        width: 60px; /* Lebar dan tinggi yang lebih kecil untuk layar kecil */
+        height: 60px;
     }
 
     .popular-games h2 {

@@ -135,8 +135,19 @@ footer {
     }
 
     .games-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        margin: 0 auto;
+        max-width: 600px; /* Tentukan lebar maksimum agar tetap dalam 2 baris */
+    }
+
+    .game-item {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        width: 100%;
     }
 
     .popular-games h2 {
@@ -161,8 +172,9 @@ footer {
     }
 
     .games-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
+        max-width: 100%;
     }
 
     .popular-games h2 {

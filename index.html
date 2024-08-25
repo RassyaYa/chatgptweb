@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shooting Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Top-Up Games</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="gameCanvas"></canvas>
-        <div class="game-info">
-            <p id="score">Score: 0</p>
-            <button id="start-button">Start Game</button>
+    <header>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
         </div>
-    </div>
-    <script src="script.js"></script>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Top Players</a></li>
+                <li><a href="#">Transaksi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="popular-games">
+            <h2>Popular</h2>
+            <div class="games-grid">
+                <div class="game-item">
+                    <img src="img/cod.jpg" alt="Call of Duty: Infinite Warfare">
+                    <h3>Call of Duty: Infinite Warfare</h3>
+                </div>
+                <div class="game-item">
+                    <img src="img/fc24.jpg" alt="EA Sports FC 24">
+                    <h3>EA Sports FC 24</h3>
+                </div>
+                <div class="game-item">
+                    <img src="img/mlbb.jpg" alt="Mobile Legends">
+                    <h3>Mobile Legends</h3>
+                </div>
+                <div class="game-item">
+                    <img src="img/naruto.jpg" alt="Naruto Storm Connections">
+                    <h3>Naruto Storm Connections</h3>
+                </div>
+                <div class="game-item">
+                    <img src="img/godofwar.jpg" alt="God of War Ragnarok">
+                    <h3>God of War Ragnarok</h3>
+                </div>
+                <div class="game-item">
+                    <img src="img/gta5.jpg" alt="Grand Theft Auto V">
+                    <h3>Grand Theft Auto V</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2024</p>
+    </footer>
 </body>
 </html>

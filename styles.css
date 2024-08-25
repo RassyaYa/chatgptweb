@@ -85,9 +85,7 @@ main {
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 0 auto;
-    max-width: 600px;
+    gap: 15px;
 }
 
 .game-item {

@@ -1,40 +1,97 @@
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 300px;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #000;
 }
 
-.game-container {
-    position: relative;
+nav ul li {
+    margin-right: 20px;
 }
 
-canvas {
-    border: 2px solid #fff;
-    display: block;
-}
-
-.game-info {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
-
-#start-button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #0072ff;
-    border: none;
+nav ul li a {
     color: white;
-    font-size: 16px;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 
-#start-button:hover {
-    background-color: #005bb5;
+nav ul li a.active, nav ul li a:hover {
+    background-color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+}
+
+.popular-games h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.game-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-item:hover {
+    transform: translateY(-5px);
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.game-item h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

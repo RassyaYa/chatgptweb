@@ -1,77 +1,104 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    padding: 20px;
+    background-color: #f3c101;
 }
 
 .search-bar {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: 300px;
 }
 
 .search-bar input {
-    width: 100%;
+    border: none;
+    outline: none;
+    flex-grow: 1;
     padding: 8px;
     border-radius: 20px;
+}
+
+.search-bar button {
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 10px;
+    list-style: none;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: white;
+    display: flex;
+    align-items: center;
+    color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #fff;
+    color: #f3c101;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .popular-games h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* Mengurangi gap antar gambar */
+    gap: 15px;
 }
 
 .game-item {
-    border-radius: 10px; /* Mengurangi radius untuk kesan lebih kecil */
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Mengurangi shadow agar tidak terlalu besar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 80px; /* Lebar dan tinggi dikurangi untuk mengecilkan gambar */
-    height: 80px;
-    margin: 0 auto; /* Agar item tetap berada di tengah */
 }
 
 .game-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Menyesuaikan gambar dengan ukuran container */
+    height: auto;
+    display: block;
 }
 
 .game-item:hover {
@@ -79,55 +106,10 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .games-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px; /* Mengurangi jarak antar gambar di layar lebih kecil */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .games-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        max-width: 100%;
-    }
-
-    .game-item {
-        width: 60px; /* Lebar dan tinggi yang lebih kecil untuk layar kecil */
-        height: 60px;
-    }
-
-    .popular-games h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    footer {
-        font-size: 12px;
-    }
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
 }
 /* CSS yang telah dibuat sebelumnya tetap di sini */
 
